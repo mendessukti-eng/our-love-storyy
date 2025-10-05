@@ -46,22 +46,23 @@
   .fun-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .wheel{background:linear-gradient(180deg,#fff,#fff9fb);padding:14px;border-radius:12px;text-align:center}
   .compliment{font-weight:700;font-size:18px;color:#2f2f3a;padding:10px}
+  #floatingLove {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+    animation: floaty 3s ease-in-out infinite alternate;
+  }
+  @keyframes floaty {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+  }
   @media (max-width:880px){
     .hero{grid-template-columns:1fr; padding:18px}
     nav{overflow:auto;padding:6px}
     .fun-grid{grid-template-columns:1fr}
   }
 </style>
-  @keyframes floatHearts {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-80px); opacity: 0; }
-}
-.heart {
-  position: fixed;
-  color: #ff6b9b;
-  animation: floatHearts 2s ease-in infinite;
-}
-
 </head>
 <body>
 
@@ -81,22 +82,23 @@
 </header>
 
 <div class="container">
+
+  <!-- HERO / INTRO -->
   <section id="home" class="hero">
     <div>
       <h1>Our job is to make you happy</h1>
-      <p class="small">For you a tiny corner of the internet where every line is about us. Built with love for my favourite person.</p>
+      <p class="small">For you — a tiny corner of the internet where every line is about us. Built with love for my favourite person.</p>
 
       <div class="card" style="margin-top:18px;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div style="width:64px;height:64px;background:linear-gradient(135deg,#ffd1e2,#fef1f4);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Dancing Script',cursive;color:#8b2f45">E & A</div>
           <div>
             <div style="font-weight:700">You and Me</div>
-            <div class="small">Little site big feelings</div>
+            <div class="small">Little site, big feelings</div>
           </div>
         </div>
         <p style="margin-top:12px;color:var(--muted)">Pro tip: this will make you smile like an idiot.</p>
       </div>
-
     </div>
 
     <div>
@@ -112,16 +114,15 @@
     </div>
   </section>
 
+  <!-- STORY -->
   <section id="story" class="card">
-    <h2 style="margin:0 0 8px 0">Once Upon a Time</h2>
+    <h2>Once Upon a Time</h2>
     <div class="story-timeline">
       <div class="story-item">
         <div class="avatar">30</div>
         <div>
           <div style="font-weight:700">December 30</div>
-          <p style="margin:6px 0;color:var(--muted)">
-            It was 30th December and I was a little bored at a wedding so I swiped through Bumble just for fun and set my location nearby. By pure coincidence he was nearby visiting too and we matched.
-          </p>
+          <p class="small">It was 30th December and I was a little bored at a wedding so I swiped through Bumble just for fun and set my location nearby. By pure coincidence he was nearby visiting too and we matched.</p>
         </div>
       </div>
 
@@ -129,50 +130,44 @@
         <div class="avatar">04</div>
         <div>
           <div style="font-weight:700">January 4</div>
-          <p style="margin:6px 0;color:var(--muted)">
-            Without even hearing his voice or doing a video call, on 4th January we started dating. It was a leap of faith words and messages that felt so right.
-          </p>
+          <p class="small">Without even hearing his voice or doing a video call, on 4th January we started dating. It was a leap of faith — words and messages that felt so right.</p>
         </div>
       </div>
 
       <div class="story-item">
         <div class="avatar">Apr</div>
         <div>
-          <div style="font-weight:700">April:Our first meeting</div>
-          <p style="margin:6px 0;color:var(--muted)">
-            In April I finally went to Vellore to meet him for the first time and it was amazing. That day changed everything.
-          </p>
+          <div style="font-weight:700">April — Our first meeting</div>
+          <p class="small">In April I finally went to Vellore to meet him for the first time and it was amazing. That day changed everything.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FIRST DATE -->
   <section id="firstdate" class="card">
-    <h2 style="margin:0 0 8px 0">Our First Date</h2>
+    <h2>Our First Date</h2>
     <p class="small">A memory I keep on loop</p>
-
     <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;">
       <div style="flex:1;min-width:240px">
-        <p style="color:var(--muted);line-height:1.6">
-          That April day in Vellore will always be one of my favourites. We finally met after months of waiting and the moment we were together it felt like home. We sat in the hotel and clung to each other like we never wanted to leave and we didn't. The hours slipped by but it never felt like time was moving. It was just us lost in our own little world. That day was more than a first date it was a glimpse into our future a promise of many tomorrows.
-        </p>
+        <p class="small">That April day in Vellore will always be one of my favourites. We finally met after months of waiting and the moment we were together it felt like home. We sat in the hotel and clung to each other like we never wanted to leave and we didn't. The hours slipped by but it never felt like time was moving. It was just us lost in our own little world. That day was more than a first date — it was a glimpse into our future, a promise of many tomorrows.</p>
       </div>
-
       <div style="width:260px">
         <div style="border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
           <img src="us1.jpeg" alt="First meeting" style="width:100%;height:180px;object-fit:cover;display:block">
           <div style="padding:12px;background:linear-gradient(180deg,#fff,#fff7fb)">
-            <div style="font-weight:700">April Vellore</div>
-            <div class="small" style="margin-top:6px">Our first day together small endless perfect</div>
+            <div style="font-weight:700">April — Vellore</div>
+            <div class="small">Our first day together — small, endless, perfect</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- GALLERY -->
   <section id="gallery" class="card">
-    <h2 style="margin:0 0 8px 0">Gallery</h2>
-    <p class="small">Photos and little moments click to enlarge</p>
+    <h2>Gallery</h2>
+    <p class="small">Photos and little moments — click to enlarge</p>
     <div class="gallery-grid" style="margin-top:12px">
       <img src="us1.jpeg" alt="photo 1" onclick="openLightbox(this)">
       <img src="us2.jpeg" alt="photo 2" onclick="openLightbox(this)">
@@ -182,9 +177,10 @@
     </div>
   </section>
 
+  <!-- REASONS -->
   <section id="reasons" class="card">
-    <h2 style="margin:0 0 8px 0">Reasons Why I Love You</h2>
-    <div class="reason-list" style="margin-top:12px">
+    <h2>Reasons Why I Love You</h2>
+    <div class="reason-list">
       <div class="reason">Because you make me laugh at the worst times</div>
       <div class="reason">Because you hold me like home</div>
       <div class="reason">Because you support my awesomeness and my chaos</div>
@@ -194,9 +190,10 @@
     </div>
   </section>
 
+  <!-- BUCKET -->
   <section id="bucket" class="card">
-    <h2 style="margin:0 0 8px 0">Bucket List : Things we want to do</h2>
-    <ul class="bucket-list small" style="margin-top:10px">
+    <h2>Bucket List : Things we want to do</h2>
+    <ul class="bucket-list small">
       <li>Travel and wake up to mountains</li>
       <li>Eat 100 burgers in a day or at least 10</li>
       <li>Watch the sunrise from a tiny cold hill station</li>
@@ -205,13 +202,12 @@
     </ul>
   </section>
 
-  <!-- FUN / GAMES -->
-  <section id="fun" class="card" aria-label="Fun & Games">
-    <h2 style="margin:0 0 8px 0">Fun :Spin & Compliment</h2>
-    <div class="small">Click the heart to get a random compliment (perfect for screenshots).</div>
-
-    <div class="fun-grid" style="margin-top:12px">
-      <div class="wheel card" style="display:flex;flex-direction:column;align-items:center;justify-content:center">
+  <!-- FUN -->
+  <section id="fun" class="card">
+    <h2>Fun : Spin & Compliment</h2>
+    <p class="small">Click the button to get a random compliment (perfect for screenshots).</p>
+    <div class="fun-grid">
+      <div class="wheel">
         <div id="complimentText" class="compliment">You are my favourite hello.</div>
         <button class="btn" onclick="newCompliment()">Get a cute line</button>
       </div>
@@ -225,19 +221,16 @@
   </section>
 
   <!-- FUTURE US -->
-  <section id="future" class="card" aria-label="Future Us">
-    <h2 style="margin:0 0 8px 0">Future Us</h2>
+  <section id="future" class="card">
+    <h2>Future Us</h2>
     <p class="small">A playful imagining of our small, perfect future.</p>
-    <div style="margin-top:10px;color:var(--muted)">
-      Imagine us older, still teasing each other in supermarket aisles, making terrible playlists, and falling asleep on the couch with the TV loud. We will still choose each other every single day.
-    </div>
+    <div style="margin-top:10px;color:var(--muted)">Imagine us older, still teasing each other in supermarket aisles, making terrible playlists, and falling asleep on the couch with the TV loud. We will still choose each other every single day.</div>
   </section>
 
-  <!-- CONTACT / LOVE REQUEST -->
-  <section id="contact" class="card" aria-label="Contact">
-    <h2 style="margin:0 0 8px 0">Contact (for love only 💌)</h2>
+  <!-- CONTACT -->
+  <section id="contact" class="card">
+    <h2>Contact (for love only 💌)</h2>
     <p class="small">Use this silly form to request hugs, kisses, complaints, or midnight calls.</p>
-
     <form id="loveForm" onsubmit="return handleForm(event)" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
       <input name="name" placeholder="Your nickname" style="flex:1;min-width:180px;padding:10px;border-radius:10px;border:1px solid #eee">
       <input name="req" placeholder="I request..." style="flex:2;min-width:220px;padding:10px;border-radius:10px;border:1px solid #eee">
@@ -246,114 +239,36 @@
     <div id="formMsg" class="small" style="margin-top:8px;color:var(--muted)"></div>
   </section>
 
-    <section id="openwhen" class="card">
-  <h2>Open When… 💌</h2>
-  <ul class="small">
-    <li><strong>You're sad:</strong> Remember you’re my favourite person, no matter what.</li>
-    <li><strong>You miss me:</strong> Look at our photos, imagine my voice saying “idiot, I miss you too.”</li>
-    <li><strong>You're proud of yourself:</strong> I’m even prouder.</li>
-  </ul>
-</section>
-  
+  <!-- OPEN WHEN -->
+  <section id="openwhen" class="card">
+    <h2>Open When… 💌</h2>
+    <ul class="small">
+      <li><strong>You're sad:</strong> Remember you’re my favourite person, no matter what.</li>
+      <li><strong>You miss me:</strong> Look at our photos, imagine my voice saying “idiot, I miss you too.”</li>
+      <li><strong>You're proud of yourself:</strong> I’m even prouder.</li>
+    </ul>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote" class="card">
+    <h2>Quote of Us ✍️</h2>
+    <p id="loveQuote" class="quote"></p>
+  </section>
+
+  <!-- PRO TIPS -->
   <section id="protips" class="card">
-  <h2>Pro Tips 💡</h2>
-  <ul class="small">
-    <li>Do not re-read this at 2am — you’ll miss me too much.</li>
-    <li>Smile breaks are mandatory while scrolling.</li>
-    <li>Use this site as proof I’m the best girlfriend ever.</li>
-  </ul>
-</section>
+    <h2>Pro Tips 💡</h2>
+    <ul class="small">
+      <li>Do not re-read this at 2am — you’ll miss me too much.</li>
+      <li>Smile breaks are mandatory while scrolling.</li>
+      <li>Use this site as proof I’m the best girlfriend ever.</li>
+    </ul>
+  </section>
 
   <footer>
     Made with ❤️ — a tiny website for my favourite human.
   </footer>
 </div>
 
-<!-- Lightbox -->
 <div id="lightbox" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:60">
-  <img id="lightboxImg" src="" alt="enlarged" style="max-width:92%;max-height:82%;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,0.6)">
-</div>
-
-<script>
-  // Navigation highlight + smooth scroll
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks.forEach(a=>{
-    a.addEventListener('click', e=>{
-      navLinks.forEach(x=>x.classList.remove('active'));
-      a.classList.add('active');
-    });
-  });
-  function scrollToId(id){
-    document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
-    document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));
-    const el = document.querySelector('nav a[href="#'+id+'"]');
-    if(el) el.classList.add('active');
-  }
-
-  // Lightbox for gallery
-  function openLightbox(img){
-    const src = img.src;
-    document.getElementById('lightboxImg').src = src;
-    document.getElementById('lightbox').style.display = 'flex';
-  }
-  document.getElementById('lightbox').addEventListener('click', ()=>document.getElementById('lightbox').style.display='none');
-
-  // Compliments
-  const compliments = [
-    "You are my favourite hello.",
-    "You make the ordinary feel special.",
-    "Your laugh is my favourite song.",
-    "You have the kindest heart, always.",
-    "With you, every moment becomes a memory.",
-    "You are brave, soft, and wonderfully you."
-  ];
-  function newCompliment(){
-    const i = Math.floor(Math.random()*compliments.length);
-    document.getElementById('complimentText').textContent = compliments[i];
-  }
-
-  // Tiny love form (local only)
-  function handleForm(e){
-    e.preventDefault();
-    const fm = e.target;
-    const name = fm.name.value || "Babe";
-    const req = fm.req.value || "A hug pls";
-    // This demo does NOT send data to any server. Instead it shows a confirmation message.
-    document.getElementById('formMsg').textContent = `Sent! ${name} requested: "${req}". (This is a local demo — replace with your email/logic to save)`;
-    fm.reset();
-    return false;
-  }
-
-  // Auto update active nav on scroll
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-  window.addEventListener('scroll', ()=>{
-    const y = window.scrollY + 120;
-    let cur = sections[0].id;
-    for(const s of sections){
-      if(s.offsetTop <= y) cur = s.id;
-    }
-    document.querySelectorAll('nav a').forEach(a=>{
-      a.classList.toggle('active', a.getAttribute('href') === '#'+cur);
-    });
-  });
-
-</script>
-
-  <div id="floatingLove">❤️</div>
-<style>
-  #floatingLove {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 22px;
-    animation: floaty 3s ease-in-out infinite alternate;
-  }
-  @keyframes floaty {
-    from { transform: translateY(0); }
-    to { transform: translateY(-10px); }
-  }
-</style>
-
-</body>
-</html>
-
+  <img id="lightboxImg" src="" alt="enlarged" style="max-width:92%;max-height:82%;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,0.6
