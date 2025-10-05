@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Our Job Is To Make You Happy 💛</title>
+<title>Our Job Is To Make You Happy</title>
 <meta name="description" content="A little love-site for my boyfriend — story, memories and silly things.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -43,17 +43,25 @@
   .btn{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;box-shadow:0 8px 18px rgba(255,107,155,0.14)}
   .small{font-size:13px;color:var(--muted)}
   footer{margin:36px 0 60px;text-align:center;color:var(--muted);font-size:13px}
-  /* Fun card */
   .fun-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .wheel{background:linear-gradient(180deg,#fff,#fff9fb);padding:14px;border-radius:12px;text-align:center}
   .compliment{font-weight:700;font-size:18px;color:#2f2f3a;padding:10px}
-  /* responsive */
   @media (max-width:880px){
     .hero{grid-template-columns:1fr; padding:18px}
     nav{overflow:auto;padding:6px}
     .fun-grid{grid-template-columns:1fr}
   }
 </style>
+  @keyframes floatHearts {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-80px); opacity: 0; }
+}
+.heart {
+  position: fixed;
+  color: #ff6b9b;
+  animation: floatHearts 2s ease-in infinite;
+}
+
 </head>
 <body>
 
@@ -73,21 +81,20 @@
 </header>
 
 <div class="container">
-  <!-- HERO / HOME -->
-  <section id="home" class="hero" aria-label="Home - Our job is to make you happy">
+  <section id="home" class="hero">
     <div>
       <h1>Our job is to make you happy</h1>
-      <p class="small">For you — a tiny corner of the internet where every line is about us. Built with love, for my favourite person.</p>
+      <p class="small">For you a tiny corner of the internet where every line is about us. Built with love for my favourite person.</p>
 
       <div class="card" style="margin-top:18px;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div style="width:64px;height:64px;background:linear-gradient(135deg,#ffd1e2,#fef1f4);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Dancing Script',cursive;color:#8b2f45">E & A</div>
           <div>
-            <div style="font-weight:700">You + Me</div>
-            <div class="small">Little site — big feelings 💛</div>
+            <div style="font-weight:700">You and Me</div>
+            <div class="small">Little site big feelings</div>
           </div>
         </div>
-        <p style="margin-top:12px;color:var(--muted)">Pro tip: press the navigation links at top or scroll. You can customize the text and images easily — everything is meant to be editable.</p>
+        <p style="margin-top:12px;color:var(--muted)">Pro tip: this will make you smile like an idiot.</p>
       </div>
 
     </div>
@@ -95,39 +102,25 @@
     <div>
       <div class="card" style="text-align:center">
         <div style="font-family:'Dancing Script',cursive;font-size:28px;color:var(--accent)">A love story</div>
-        <div class="quote">"Once upon a time..."</div>
+        <div class="quote">"Once upon a time"</div>
         <p class="small">Tap <span class="btn" onclick="scrollToId('story')">Our Story</span> to read how we met.</p>
       </div>
       <div class="card" style="margin-top:12px;text-align:center">
         <div style="font-weight:700">Random Love Note</div>
-        <div style="margin-top:8px">You make ordinary days feel like tiny celebrations. ✨</div>
+        <div style="margin-top:8px">You make ordinary days feel like tiny celebrations.</div>
       </div>
     </div>
   </section>
 
-  <!-- OUR STORY -->
-  <section id="story" class="card" aria-label="Our Story">
-    <h2 style="margin:0 0 8px 0">Once Upon a Time…</h2>
+  <section id="story" class="card">
+    <h2 style="margin:0 0 8px 0">Once Upon a Time</h2>
     <div class="story-timeline">
-      <!-- Use the exact story text the user provided -->
       <div class="story-item">
         <div class="avatar">30</div>
         <div>
           <div style="font-weight:700">December 30</div>
           <p style="margin:6px 0;color:var(--muted)">
-            It was <strong>30th December</strong>, and I was a little bored at a wedding — so I swiped through Bumble just for fun and set my location nearby.
-            By pure coincidence, he was nearby visiting too, and we matched. 💛
-          </p>
-        </div>
-      </div>
-
-      <div class="story-item">
-        <div class="avatar">✈️</div>
-        <div>
-          <div style="font-weight:700">A twist of fate</div>
-          <p style="margin:6px 0;color:var(--muted)">
-            We couldn't meet then — he had to catch a flight back to Vellore for college on the 1st of January, and the 31st was already full of other plans.
-            So the first time we matched, it didn't turn into a meet-up... but it turned into something better.
+            It was 30th December and I was a little bored at a wedding so I swiped through Bumble just for fun and set my location nearby. By pure coincidence he was nearby visiting too and we matched.
           </p>
         </div>
       </div>
@@ -137,8 +130,7 @@
         <div>
           <div style="font-weight:700">January 4</div>
           <p style="margin:6px 0;color:var(--muted)">
-            Without even hearing his voice or doing a video call, <strong>on 4th January we started dating</strong>.
-            It was a leap of faith — words and messages that felt so right.
+            Without even hearing his voice or doing a video call, on 4th January we started dating. It was a leap of faith words and messages that felt so right.
           </p>
         </div>
       </div>
@@ -146,103 +138,76 @@
       <div class="story-item">
         <div class="avatar">Apr</div>
         <div>
-          <div style="font-weight:700">April — Our first meeting</div>
+          <div style="font-weight:700">April:Our first meeting</div>
           <p style="margin:6px 0;color:var(--muted)">
-            In April I finally went to Vellore to meet him for the first time — and it was amazing.
-            That day changed everything.
+            In April I finally went to Vellore to meet him for the first time and it was amazing. That day changed everything.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FIRST DATE -->
-  <section id="firstdate" class="card" aria-label="First Date">
+  <section id="firstdate" class="card">
     <h2 style="margin:0 0 8px 0">Our First Date</h2>
-    <p class="small">A memory I keep on loop.</p>
+    <p class="small">A memory I keep on loop</p>
 
     <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;">
       <div style="flex:1;min-width:240px">
         <p style="color:var(--muted);line-height:1.6">
-          That April day in Vellore will always be one of my favourites. We finally met after months of waiting, and the moment we were together, it felt like home.
-          We sat in the hotel and clung to each other like we never wanted to leave — and we didn't. The hours slipped by, but it never felt like time was moving.
-          It was just us, lost in our own little world. That day was more than a first date — it was a glimpse into our future, a promise of many tomorrows.
+          That April day in Vellore will always be one of my favourites. We finally met after months of waiting and the moment we were together it felt like home. We sat in the hotel and clung to each other like we never wanted to leave and we didn't. The hours slipped by but it never felt like time was moving. It was just us lost in our own little world. That day was more than a first date it was a glimpse into our future a promise of many tomorrows.
         </p>
       </div>
 
       <div style="width:260px">
         <div style="border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
-          <img src="https://picsum.photos/seed/vellore/600/400" alt="First meeting" style="width:100%;height:180px;object-fit:cover;display:block">
+          <img src="us1.jpeg" alt="First meeting" style="width:100%;height:180px;object-fit:cover;display:block">
           <div style="padding:12px;background:linear-gradient(180deg,#fff,#fff7fb)">
-            <div style="font-weight:700">April, Vellore</div>
-            <div class="small" style="margin-top:6px">Our first day together — small, endless, perfect.</div>
+            <div style="font-weight:700">April Vellore</div>
+            <div class="small" style="margin-top:6px">Our first day together small endless perfect</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="card" aria-label="Gallery / Memories">
+  <section id="gallery" class="card">
     <h2 style="margin:0 0 8px 0">Gallery</h2>
-    <p class="small">Photos & little moments — click to enlarge.</p>
+    <p class="small">Photos and little moments click to enlarge</p>
     <div class="gallery-grid" style="margin-top:12px">
-      <!-- Replace src with your own photos -->
-      <img src="images/us1.jpeg" alt="photo 1" onclick="openLightbox(this)">
-      <img src="images/us2.jpeg" alt="photo 2" onclick="openLightbox(this)">
-      <img src="images/us3.jpeg" alt="photo 3" onclick="openLightbox(this)">
-      <img src="images/us4.jpeg" alt="photo 4" onclick="openLightbox(this)">
-      <img src="images/us5.jpeg" alt="photo 5" onclick="openLightbox(this)">
-      <img src="images/us6.jpeg" alt="photo 6" onclick="openLightbox(this)">
+      <img src="us1.jpeg" alt="photo 1" onclick="openLightbox(this)">
+      <img src="us2.jpeg" alt="photo 2" onclick="openLightbox(this)">
+      <img src="us4.jpeg" alt="photo 3" onclick="openLightbox(this)">
+      <img src="us5.jpeg" alt="photo 4" onclick="openLightbox(this)">
+      <img src="us6.jpeg" alt="photo 5" onclick="openLightbox(this)">
     </div>
   </section>
 
-  <!-- REASONS -->
-  <section id="reasons" class="card" aria-label="Reasons I love you">
+  <section id="reasons" class="card">
     <h2 style="margin:0 0 8px 0">Reasons Why I Love You</h2>
     <div class="reason-list" style="margin-top:12px">
-      <div class="reason">Because you make me laugh at the worst times.</div>
-      <div class="reason">Because you hold me like home.</div>
-      <div class="reason">Because you support my awesomeness (and my chaos).</div>
-      <div class="reason">Because your texts make my whole day better.</div>
-      <div class="reason">Because you dream with me—big and small.</div>
-      <div class="reason">Because you always try, even when it's hard.</div>
+      <div class="reason">Because you make me laugh at the worst times</div>
+      <div class="reason">Because you hold me like home</div>
+      <div class="reason">Because you support my awesomeness and my chaos</div>
+      <div class="reason">Because your texts make my whole day better</div>
+      <div class="reason">Because you dream with me big and small</div>
+      <div class="reason">Because you always try even when it's hard</div>
     </div>
   </section>
 
-  <!-- BUCKET LIST -->
-  <section id="bucket" class="card" aria-label="Bucket List Together">
-    <h2 style="margin:0 0 8px 0">Bucket List — Things we want to do</h2>
+  <section id="bucket" class="card">
+    <h2 style="margin:0 0 8px 0">Bucket List : Things we want to do</h2>
     <ul class="bucket-list small" style="margin-top:10px">
-      <li>Travel to Manali and wake up to mountains.</li>
-      <li>Eat 100 momos in a day (or at least 10 😂).</li>
-      <li>Watch the sunrise from a tiny, cold hill station.</li>
-      <li>Make a scrapbook of all our silly receipts & tickets.</li>
-      <li>Get old and still hold hands on noisy evenings.</li>
+      <li>Travel and wake up to mountains</li>
+      <li>Eat 100 burgers in a day or at least 10</li>
+      <li>Watch the sunrise from a tiny cold hill station</li>
+      <li>Make a scrapbook of all our silly receipts and tickets</li>
+      <li>Get old and still hold hands on noisy evenings</li>
     </ul>
-  </section>
-
-  <!-- NOTES / LETTERS -->
-  <section id="notes" class="card" aria-label="Notes or letters">
-    <h2 style="margin:0 0 8px 0">Notes / Letters</h2>
-    <p class="small">Little pockets of words — click to open.</p>
-
-    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-      <div style="flex:1;min-width:220px" class="card">
-        <div style="font-weight:700">Open when you miss me</div>
-        <p class="small" style="margin-top:8px">Hey — if you're missing me, read this: I miss you more. Let's plan a silly movie night when I come next.</p>
-      </div>
-
-      <div style="flex:1;min-width:220px" class="card">
-        <div style="font-weight:700">Open when you're proud</div>
-        <p class="small" style="margin-top:8px">I'm proud of you — always. Keep going, love. I’ll celebrate with you soon.</p>
-      </div>
-    </div>
   </section>
 
   <!-- FUN / GAMES -->
   <section id="fun" class="card" aria-label="Fun & Games">
-    <h2 style="margin:0 0 8px 0">Fun — Spin & Compliment</h2>
+    <h2 style="margin:0 0 8px 0">Fun :Spin & Compliment</h2>
     <div class="small">Click the heart to get a random compliment (perfect for screenshots).</div>
 
     <div class="fun-grid" style="margin-top:12px">
@@ -253,7 +218,7 @@
       <div class="card" style="display:flex;flex-direction:column;align-items:center;justify-content:center">
         <div style="font-weight:700">Tiny quiz</div>
         <div class="small" style="margin-top:8px">What's our favourite snack?<br>
-          <button style="margin-top:10px" onclick="alert('Momos forever!')">Guess</button>
+          <button style="margin-top:10px" onclick="alert('burgers and fried chicken forever!')">Guess</button>
         </div>
       </div>
     </div>
@@ -264,7 +229,7 @@
     <h2 style="margin:0 0 8px 0">Future Us</h2>
     <p class="small">A playful imagining of our small, perfect future.</p>
     <div style="margin-top:10px;color:var(--muted)">
-      Imagine us older, still teasing each other in supermarket aisles, making terrible playlists, and falling asleep on the couch with the TV loud. We will still choose each other — every single day.
+      Imagine us older, still teasing each other in supermarket aisles, making terrible playlists, and falling asleep on the couch with the TV loud. We will still choose each other every single day.
     </div>
   </section>
 
@@ -280,6 +245,24 @@
     </form>
     <div id="formMsg" class="small" style="margin-top:8px;color:var(--muted)"></div>
   </section>
+
+    <section id="openwhen" class="card">
+  <h2>Open When… 💌</h2>
+  <ul class="small">
+    <li><strong>You're sad:</strong> Remember you’re my favourite person, no matter what.</li>
+    <li><strong>You miss me:</strong> Look at our photos, imagine my voice saying “idiot, I miss you too.”</li>
+    <li><strong>You're proud of yourself:</strong> I’m even prouder.</li>
+  </ul>
+</section>
+  
+  <section id="protips" class="card">
+  <h2>Pro Tips 💡</h2>
+  <ul class="small">
+    <li>Do not re-read this at 2am — you’ll miss me too much.</li>
+    <li>Smile breaks are mandatory while scrolling.</li>
+    <li>Use this site as proof I’m the best girlfriend ever.</li>
+  </ul>
+</section>
 
   <footer>
     Made with ❤️ — a tiny website for my favourite human.
@@ -355,6 +338,22 @@
   });
 
 </script>
+
+  <div id="floatingLove">❤️</div>
+<style>
+  #floatingLove {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+    animation: floaty 3s ease-in-out infinite alternate;
+  }
+  @keyframes floaty {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+  }
+</style>
+
 </body>
 </html>
 
